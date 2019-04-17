@@ -232,7 +232,7 @@
 
         <section>
 
-          <h3 style="text-transform: none;"><a href="https://simonis.github.io/FOSDEM2019">https://simonis.github.io/FOSDEM2019</a></h3>
+          <h3 style="text-transform: none;"><a href="https://simonis.github.io/RumbleInTheJavaJungle">https://simonis.github.io/RumbleInTheJavaJungle</a></h3>
 
         </section>
 
@@ -662,6 +662,8 @@
                   <li class="fragment">Modules/Packages in <code>jdk.incubator</code></li>
                   <li class="fragment">API must be finalized, substantially improved or removed</li>
                   <li class="fragment"><b>Not part of the Java SE standard!</b></li>
+                  <li class="fragment">9: <a href="https://openjdk.java.net/jeps/110">HTTP/2 Client (Incubator)</a> &#8658; 11: <a href="https://openjdk.java.net/jeps/321">HTTP/2 Client (Standard)</a>
+                  </li>
                </ul>
               </li>
               <li class="fragment"><a href="http://openjdk.java.net/jeps/12">JEP 12: Preview Language and VM Features</a>
@@ -669,6 +671,8 @@
                   <li class="fragment">Fully specified and implemented, yet impermanent</li>
                   <li class="fragment"><b>Part of Java SE</b>, checked by the corresponding TCK</li>
                   <li class="fragment">Disabled by default (use <code>--enable-preview</code> flag)</li>
+                  <li class="fragment">12: <a href="https://openjdk.java.net/jeps/325">Switch Expressions (Preview)</a>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -696,12 +700,12 @@
           <h1>OpenJDK Updates Projects</h1>
 
           <ul class="larger">
-            <li class="fragment"><a href="http://openjdk.java.net/projects/jdk6">JDK 6</a> &#8658; maintained by Azul</li>
-            <li class="fragment"><a href="http://openjdk.java.net/projects/jdk7u">JDK 7 Updates</a> &#8658; maintained by Red Hat</li>
-            <li class="fragment"><a href="http://openjdk.java.net/projects/jdk8u">JDK 8 Updates</a> &#8658; maintained by Red Hat</li>
-            <li class="fragment"><span style="text-decoration-line: line-through; text-decoration-style: wavy;"><a href="http://openjdk.java.net/projects/jdk-updates/archive.html">JDK 9 Updates</a></span> &#8658; abandoned after two releases</li>
-            <li class="fragment"><span style="text-decoration-line: line-through; text-decoration-style: wavy;"><a href="http://openjdk.java.net/projects/jdk-updates/archive.html">JDK 10 Updates</a></span> &#8658; abandoned after two releases</li>
-            <li class="fragment"><a href="http://openjdk.java.net/projects/jdk-updates/">JDK 11 Updates</a> &#8658; ???</li>
+            <li class="fragment"><a href="http://openjdk.java.net/projects/jdk6">JDK 6</a> &#8658; led and maintained by Azul</li>
+            <li class="fragment"><a href="http://openjdk.java.net/projects/jdk7u">JDK 7u</a> &#8658; led and maintained by Red Hat</li>
+            <li class="fragment"><a href="http://openjdk.java.net/projects/jdk8u">JDK 8u</a> &#8658; led by Red Hat, community maintained</li>
+            <li class="fragment"><span style="text-decoration-line: line-through; text-decoration-style: wavy;"><a href="http://openjdk.java.net/projects/jdk-updates/archive.html">JDK 9u</a></span> &#8658; abandoned after two releases</li>
+            <li class="fragment"><span style="text-decoration-line: line-through; text-decoration-style: wavy;"><a href="http://openjdk.java.net/projects/jdk-updates/archive.html">JDK 10u</a></span> &#8658; abandoned after two releases</li>
+            <li class="fragment"><a href="http://openjdk.java.net/projects/jdk-updates/">JDK 11u</a> &#8658; led by Red Hat, community maintained</li>
           </ul>
         </section>
 
@@ -712,7 +716,7 @@
           <ul class="larger">
             <li class="fragment">Derived from Open JDK
               <ul>
-                <li class="fragment">had non - Java SE addons (e.g. JavaFX, WebStart)</li>
+                <li class="fragment"><em>non-JavaSE</em> addons (e.g. JavaFX, WebStart)</li>
                 <li class="fragment">and <em>commercial features</em><br/> (e.g. FlightRecorder, MissionControl)</li>
               </ul>
             </li>
@@ -756,7 +760,11 @@
                 <li><span class="fragment" data-fragment-index="5">11</span> <span class="fragment" data-fragment-index="7">LTS</span> <span class="fragment" data-fragment-index="6">(18.9)</span>, <span class="fragment" data-fragment-index="5">11.0.1</span> <span class="fragment" data-fragment-index="7">LTS</span> <span class="fragment" data-fragment-index="6">(18.9)</span>, <span class="fragment" data-fragment-index="5">11.0.2</span> <span class="fragment" data-fragment-index="7">LTS</span> <span class="fragment" data-fragment-index="6">(18.9)</span></li>
               </ul>
             </li>
-            <li class="fragment" data-fragment-index="8"><a href="https://bugs.openjdk.java.net/browse/JDK-8216383">8216383: Remove the system property "java.vendor.version"</a></li>
+            <li class="fragment" data-fragment-index="8"><a href="https://bugs.openjdk.java.net/browse/JDK-8216383">8216383: Remove the system property "java.vendor.version"</a>
+              <ul>
+                <li class="fragment" data-fragment-index="9">Meanwhile used by Azul Zulu, Amazon Corretto, AdoptOpenJDK, ...</li>
+              </ul>
+            </li>
           </ul>
         </section>
 
@@ -867,9 +875,9 @@ OpenJDK 64-Bit Server VM 18.9 (build 11.0.2+9, mixed mode)</span>
                 <li>Supported through General Support Contract</li>
               </ul>
             </li>
-            <li>Currently only 8, 11 planned for mid-2019</li>
+            <li>Java 8 and 11</li>
             <li>LTS support on Linux, Windows, MacOS</li>
-            <li>Open GitHub repo with a few add-ons and fixes</li>
+            <li>Some add-ons and fixes (<a href="https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/patches.html">8u patches</a>, <a href="https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/patches.html">11u patches</a>)</li>
           </ul>
         </section>
 
@@ -899,6 +907,19 @@ OpenJDK 64-Bit Server VM 18.9 (build 11.0.2+9, mixed mode)</span>
             <li>Linux, Windows, MacOS</li>
             <li>x64, ppc64, ppc64le</li>
             <li>GitHub repo with a few add-ons and fixes</li>
+          </ul>
+        </section>
+
+
+        <section>
+          <h1><a href="https://github.com/alibaba/dragonwell8">Alibaba Dragonwell</a></h1>
+
+          <ul class="larger">
+            <li>Maintained by Alibaba (see <a href="https://www.alibabacloud.com/blog/alibaba-makes-dragonwell-openjdk-open-source_594624">announcement</a>)</li>
+            <li>Currently Java 8 / Linux x86_64 only</li>
+            <li>Some add-ons and features like <a href="https://openjdk.java.net/jeps/8203832">JWarmup</a> and JFR </li>
+            <li>Doesn't yet include <a href="https://assets.ctfassets.net/oxjq45e8ilak/7J537sIeZisGIgwe4qyAE6/33503896530097133df7e7cdaa7837db/Sanhong_Extreme_Scaling_with_Alibaba_JDK.pdf">AliJDK features</a>
+              like:<br/> multi-tenancy, coroutines, GC invisible heap &amp; Zprofiler</li>
           </ul>
         </section>
 
@@ -947,9 +968,21 @@ OpenJDK 64-Bit Server VM 18.9 (build 11.0.2+9, mixed mode)</span>
         <section>
           <h2>JDK 11 Fix Ratio</h2>
 
-	  <img class="plain" data-src="images/jdk11_ga_fixratio.png.jpeg" alt="OpenJDK Fix Ratio"/>
+	  <img class="plain" style="width: 400%" data-src="images/jdk11_ga_fixratio.png.jpeg" alt="OpenJDK Fix Ratio"/>
           <p style="font-size: smaller;"><a href="https://blogs.oracle.com/java-platform-group/building-jdk-11-together">(c) Dalibor Topic, "Building JDK 11 Together"</a></p>
 
+        </section>
+
+
+        <section>
+          <h1>What's next?</h1>
+
+          <ul class="larger">
+            <li class="fragment"><a href="https://openjdk.java.net/projects/valhalla/">Project Valhalla</a> - Value Types</li>
+            <li class="fragment"><a href="https://openjdk.java.net/projects/loom/">Project Loom</a> - Fibers, Continuations &amp; Tail-Calls</li>
+            <li class="fragment"><a href="https://openjdk.java.net/projects/panama/">Project Panama</a> - Interconnecting JVM and native code</li>
+            <li class="fragment"><a href="https://openjdk.java.net/projects/graal/">Project Graal</a> / <a href="https://openjdk.java.net/projects/metropolis/">Metropolis</a> - Java in Java, AOT</li>
+          </ul>
         </section>
 
 
@@ -961,6 +994,7 @@ OpenJDK 64-Bit Server VM 18.9 (build 11.0.2+9, mixed mode)</span>
             <li class="fragment" data-fragment-index="2">You have the choice which distribution to use!
               <ul>
                 <li class="fragment" data-fragment-index="3">OpenJ9 a great, alternative VM</li>
+                <li class="fragment" data-fragment-index="3">Graal/SubstrateVM a game changer?</li>
               </ul>
             </li>
             <li class="fragment" data-fragment-index="4">Competition is good <span class="fragment" data-fragment-index="5">- Collaboration as well :)</span></li>
@@ -976,7 +1010,7 @@ OpenJDK 64-Bit Server VM 18.9 (build 11.0.2+9, mixed mode)</span>
 
         <section>
 
-          <h3 style="text-transform: none;"><a href="https://simonis.github.io/FOSDEM2019">https://simonis.github.io/FOSDEM2019</a></h3>
+          <h3 style="text-transform: none;"><a href="https://simonis.github.io/RumbleInTheJavaJungle">https://simonis.github.io/RumbleInTheJavaJungle</a></h3>
 
         </section>
 
